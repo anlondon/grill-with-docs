@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 <what-to-do>
 
-Interview me relentlessly about every aspect of this plan until we reach a shared understanding. Walk down each branch of the design tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer.
+Interview me until we reach a shared understanding of this change. Walk only the branches that are related to the current requirement and the change being made. Ask one of those branches only when its requirement is unclear, or the change affects it and that effect cannot be confirmed. Skip a branch that has no relation to this change, even if it is nearby. For each question you do ask, provide your recommended answer.
 
 Speak in the user's language, in everyday words. Every question and every recommended answer uses the same thickness as a glossary entry:
 
@@ -18,6 +18,12 @@ Speak in the user's language, in everyday words. Every question and every recomm
 A question that leads with the coined name is not done. A recommendation without the one reason sentence is not done.
 
 Ask the questions one at a time, waiting for feedback on each question before continuing.
+
+When the user has already brought in a product or business reply, do not open questions about what you do not understand, what seems ambiguous, or what appears to contradict the current business but cannot be settled into a requirement. Later, ask one confirmation: restate that reply in one plain sentence and ask whether you heard it right. One confirmation for that reply, then move on.
+
+The user pastes: "If the card is declined, cancel the order. Do not retry." Ask only: "What I heard is that a declined card cancels the whole order and does not retry. Is that right?" Do not go on to ask whether cancel means the whole order or one dish.
+
+Do not ask about a place that has no relation to the current requirement or change. Not being named is not itself a reason to skip: ask when a related place has an unclear requirement, or the change affects it and that effect cannot be confirmed. The user asks to cancel an order when the card is declined. Ask whether money already taken is refunded, because that refund is tied to the cancellation and the reply never said. Do not ask whether the kitchen ticket font changes, because that font is not tied to this cancellation.
 
 If a question can be answered by exploring the codebase, explore the codebase instead.
 
@@ -81,7 +87,7 @@ The user says the order is void whether the card is declined or the charge times
 
 ### Discuss concrete scenarios
 
-When domain relationships are being discussed, stress-test them with specific scenarios. Invent scenarios that probe edge cases and force the user to be precise about the boundaries between concepts. The scene goes in the question itself, in everyday words. A relationship stated only with the short names is not yet discussed.
+When a relationship inside this change is being discussed, and the requirement is unclear or the effect of the change cannot be confirmed, stress-test it with a specific scenario. The scene goes in the question itself, in everyday words. Do not invent a scenario for a relationship that has no bearing on this change.
 
 ### Cross-reference with code
 
