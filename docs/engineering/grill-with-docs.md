@@ -1,3 +1,7 @@
+[How the skills fit together](../skills.md) | [中文](../skills.zh-CN.md)
+
+> In this fork, `grill-with-docs` is a self-contained skill and writes `CONTEXT.md`. The essay below is the upstream description: it still says the skill is one line that delegates to `grilling` and `domain-modeling`, and that terms go to `GLOSSARY.md`.
+
 ## What it does
 
 `grill-with-docs` interviews you about a plan or design until you and the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) share one understanding of it, and writes the vocabulary and the hard decisions into your repo while it does. It is the same interview [grill-me](https://aihero.dev/skills-grill-me) runs (a round of questions, then wait, then the next round), pointed at a codebase.

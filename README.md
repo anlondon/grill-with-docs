@@ -1,3 +1,5 @@
+English | [中文](./README.zh-CN.md)
+
 <p>
   <a href="https://www.aihero.dev/s/skills-newsletter">
     <picture>
@@ -209,6 +211,8 @@ Software engineering fundamentals matter more than ever. These skills are my bes
 ## Reference
 
 These split on one axis: who can invoke them. **User-invoked** skills are reachable only when you type them (e.g. `/grill-me`); their job is to orchestrate. **Model-invoked** skills can be invoked by you _or_ reached for automatically by the agent when the task fits; they hold the reusable discipline. A user-invoked skill may invoke model-invoked skills, but never another user-invoked one.
+
+Each skill is introduced on its own, with when to use it, in [docs/skills.md](./docs/skills.md) ([中文](./docs/skills.zh-CN.md)).
 
 ### Engineering
 
